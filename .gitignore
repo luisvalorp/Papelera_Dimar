@@ -1,0 +1,6 @@
+# Project exclude paths
+/target/
+.idea
+Screenshots
+serenity.properties
+Papelera_Dimar.iml
