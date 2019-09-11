@@ -1,6 +1,7 @@
 package Selenium;
 
 import Commons.Base;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -13,7 +14,8 @@ public class S_EliminarDeshacer extends Base {
         Thread.sleep(2000);
         System.out.println(driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText());
         driver.findElement(By.cssSelector("i.icon-checkmark")).isDisplayed();
-        driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText().contentEquals(mensaje);
+        String MensajeActual = driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText();
+        Assert.assertEquals(mensaje, MensajeActual);
         driver.findElement(By.xpath("//a[contains(text(),'¿Deshacer?')]")).click();
     }
     @Test
