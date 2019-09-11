@@ -12,7 +12,6 @@ public class S_EliminarDeshacer extends Base {
         String mensaje = "“Pack de 250 bolsas kraft 32x12x41 cm” eliminado. ¿Deshacer?";
 
         Thread.sleep(2000);
-        System.out.println(driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText());
         driver.findElement(By.cssSelector("i.icon-checkmark")).isDisplayed();
         String MensajeActual = driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText();
         Assert.assertEquals(mensaje, MensajeActual);
