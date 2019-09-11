@@ -30,8 +30,12 @@ public class S_EliminarProducto extends Base {
     }
     @Test
     public void VerificarMensaje() {
+        String Mensaje = "“Pack de 250 bolsas kraft 32x12x41 cm” eliminado. ¿Deshacer?";
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).isDisplayed();
+        String MensajeActual = driver.findElement(By.cssSelector("div.message-container.container.success-color.medium-text-center")).getText();
+        Assert.assertEquals(Mensaje, MensajeActual);
         driver.findElement(By.xpath("//a[contains(text(),'¿Deshacer?')]")).isDisplayed();
         Base.captureScreenShot(driver, "Evidencia Eliminó Exitosamente");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
