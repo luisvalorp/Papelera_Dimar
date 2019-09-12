@@ -1,10 +1,20 @@
 node {
-stage ('SCM checkout'){
-git poll: true, url: "https://github.com/luisvalorp/Papelera_Dimar.git"
-}
-stage ('Build'){
-dir("Papelera_Dimar") {
-sh "mvn clean install"
-}
-}
+   def mvnHome
+   stage('Preparation')
+      git 'https://github.com/luisvalorp/Papelera_Dimar.git'
+      mvnHome = tool 'M3'
+   }
+   stage('Build') {
+      withEnv(["MVN_HOME=$mvnHome"]) {
+         if (isUnix()) {
+            sh '"$MVN_HOME\\bin\\mvn" -Dmaven.test.failure.ignore clean package'
+         } else {
+            bat(/"%MVN_HOME%\\bin\\mvn" -Dmaven.test.failure.ignore clean package/)
+         }
+      }
+   }
+   stage('Results') {
+      junit '**/target/surefire-reports/TEST-*.xml'
+      archiveArtifacts 'target/*.jar'
+   }
 }
