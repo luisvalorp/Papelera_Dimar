@@ -3,7 +3,7 @@ stage ('SCM checkout'){
 git "https://github.com/luisvalorp/Papelera_Dimar.git"
 }
 stage ('Build'){
-dir("Papelera_Dimar") {
+dir("C:\\Users\\luis.valor\\IdeaProjects\\Papelera_Dimar") {
 sh "mvn clean install"
 }
 }
