@@ -1,6 +1,6 @@
 node {
 stage (‘SCM checkout’){
-git “https://github.com/luisvalorp/Papelera_Dimar”
+git “https://github.com/luisvalorp/Papelera_Dimar.git”
 }
 stage (‘Build’){
 dir(“Papelera_Dimar”) {
