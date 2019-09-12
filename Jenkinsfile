@@ -1,7 +1,7 @@
 node {
    def mvnHome
    stage('Preparation')
-      git 'https://github.com/luisvalorp/Papelera_Dimar.git'
+      git "https://github.com/luisvalorp/Papelera_Dimar.git"
       mvnHome = tool 'M3'
    }
    stage('Build') {
@@ -17,4 +17,9 @@ node {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
    }
+}
+}
+}
+}
+}
 }
