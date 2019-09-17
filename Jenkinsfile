@@ -1,13 +1,21 @@
-node {
-stage ('SCM checkout'){
-git "https://github.com/luisvalorp/Papelera_Dimar.git"
-}
-stage ('Build'){
-dir("Papelera_Dimar") {
-sh "mvn clean install"
-}
-dir("Papelera_Dimar/target") {
-sh "java -jar Papelera_Dimar-1.0-SNAPSHOT.jar"
-}
-}
+pipeline{
+    agent any
+
+    stages{
+        stage('Compile stage'){
+            steps{
+                withMaven(maven : 'M3'){
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+
+        stage('Testing Stage'){
+            steps{
+                withMaven(maven : 'M3'){
+                    sh 'mvn test'
+                }
+            }
+        }
+    }
 }
