@@ -15,7 +15,7 @@ pipeline{
         stage('Testing Stage'){
             steps{
                 withMaven(maven : 'M3'){
-                    bat 'mvn install'
+                    bat 'mvn verify'
                 }
             }
         }
