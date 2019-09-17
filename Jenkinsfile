@@ -1,22 +1,22 @@
-pipeline {
+pipeline{
     agent any
-    tools {
-        maven 'M3'
-        jdk 'JAVA_HOME'
-    }
-    stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M3 = ${M3}"
-                '''
+        tools {
+            maven 'M3'
+        }
+    stages{
+        stage('Compile stage'){
+            steps{
+                withMaven(maven : 'M3'){
+                    bat 'mvn clean compile'
+                }
             }
         }
 
-        stage ('Build') {
-            steps {
-                echo 'This is a minimal pipeline.'
+        stage('Testing Stage'){
+            steps{
+                withMaven(maven : 'M3'){
+                    bat 'mvn test'
+                }
             }
         }
     }
