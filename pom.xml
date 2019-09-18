@@ -142,8 +142,8 @@
                 <configuration>
                     <includes>
                            <include>Run_InicioSesion.java</include>
-                        <!--    <include>Run_EliminarCupon.java</include>
-                            <include>Run_ActualizarCarrito.java</include>
+                           <include>Run_EliminarCupon.java</include>
+                         <!--       <include>Run_ActualizarCarrito.java</include>
                             <include>Run_CambiarDireccion.java</include>
                             <include>Run_CuponValido.java</include>
                             <include>Run_CuponVencido.java</include>
