@@ -15,7 +15,7 @@ pipeline{
         stage('Testing Stage'){
             steps{
                 withMaven(maven : 'M3'){
-                    sh 'mvn test'
+                    sh 'mvn verify'
                 }
             }
         }
