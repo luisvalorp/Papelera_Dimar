@@ -14,9 +14,15 @@ public class Base {
     public static WebDriver driver;
 
     public void AbrirNavegador() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        
+        DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
+        capabilities.setCapability("version","");
+        capabilities.setPlatform(Platform.Linux);
+        driver = new RemoteWebDriver (new URL("http://192.168.99.100:4444/wd/hub"), capabilities);
+        
+       /* System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
 
        /* //Usando Firefox//
         System.setProperty("webdriver.gecko.driver","C:\\Users\\luis.valor\\Downloads\\geckodriver.exe");
