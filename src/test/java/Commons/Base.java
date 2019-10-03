@@ -14,7 +14,7 @@ public class Base {
     public static WebDriver driver;
 
     public void AbrirNavegador() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\luis.valor\\Desktop\\Jenkins_Home\\chromedriver_win32_new\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "http://192.168.99.100:4444/wd/hub");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
