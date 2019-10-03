@@ -19,7 +19,7 @@ public class Base {
 
     public void AbrirNavegador() {
         
-        System.setProperty("webdriver.chrome.driver", "/c/Users/luis.valor/Desktop/Jenkins_Home/workspace/Prueba_Maven/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/c/Users/luis.valor/Downloads/chromedriver_win32_new/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         
