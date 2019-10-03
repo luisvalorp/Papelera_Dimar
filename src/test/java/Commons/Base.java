@@ -19,9 +19,13 @@ public class Base {
 
     public void AbrirNavegador() {
         
-        System.setProperty("webdriver.chrome.driver", "http://192.168.99.100:4444/wd/hub");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+
+    capabilities.setCapability(“version”, “”);
+
+    capabilities.setPlatform(Platform.WINDOWS);
+
+    RemoteWebDriver driver = new RemoteWebDriver(new URL("http://http://192.168.99.100:4444/wd/hub"),capabilities);
         
        /* System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
