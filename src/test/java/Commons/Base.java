@@ -19,10 +19,9 @@ public class Base {
 
     public void AbrirNavegador() {
         
-        DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
-        capabilities.setCapability("version","");
-        capabilities.setPlatform(Platform.Linux);
-        driver = new RemoteWebDriver (new URL("http://192.168.99.100:4444/wd/hub"), capabilities);
+        System.setProperty("webdriver.chrome.driver", "/c/Users/luis.valor/Desktop/Jenkins_Home/workspace/Prueba_Maven/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
         
        /* System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
