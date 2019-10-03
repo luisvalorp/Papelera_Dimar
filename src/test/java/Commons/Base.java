@@ -20,17 +20,17 @@ public class Base {
 
     public void AbrirNavegador() {
         
-    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+    /*DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 
     capabilities.setCapability("version", "");
 
     capabilities.setPlatform(Platform.WINDOWS);
 
-    RemoteWebDriver driver = new RemoteWebDriver(new URL("http://http://192.168.99.100:4444/wd/hub"), capabilities);
+    RemoteWebDriver driver = new RemoteWebDriver(new URL("http://http://192.168.99.100:4444/wd/hub"), capabilities);*/
         
-       /* System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+       /System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();*/
+        driver.manage().window().maximize();
 
        /* //Usando Firefox//
         System.setProperty("webdriver.gecko.driver","C:\\Users\\luis.valor\\Downloads\\geckodriver.exe");
