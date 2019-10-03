@@ -14,7 +14,7 @@ public class Base {
     public static WebDriver driver;
 
     public void AbrirNavegador() {
-        System.setProperty("webdriver.chrome.driver", "http://192.168.99.100:4444/wd/hub");
+        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
