@@ -21,7 +21,7 @@ public class Base {
         
     DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 
-    capabilities.setCapability(“version”, “”);
+    capabilities.setCapability("version", "");
 
     capabilities.setPlatform(Platform.WINDOWS);
 
