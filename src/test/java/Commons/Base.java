@@ -39,7 +39,7 @@ public class Base {
         dr.setPlatform(Platform.LINUX);
         //System.setProperty("webdriver.chrome.driver", "C:\Users\luis.valor\Downloads\chromedriver_win32_new\chromedriver.exe");
 
-        driver = new RemoteWebDriver(new URL("http://localhost:4545/wd/hub"),dr);
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4545/wd/hub"),dr);
         driver.manage().window().maximize();
 
     }
