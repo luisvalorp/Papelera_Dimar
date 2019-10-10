@@ -141,21 +141,21 @@
                 <version>3.0.0-M3</version>
                 <configuration>
                     <includes>
-                           <include>Run_InicioSesion.java</include>
-                  <!--      <include>Run_EliminarCupon.java</include>
-                            <include>Run_ActualizarCarrito.java</include>
-                            <include>Run_CambiarDireccion.java</include>
-                            <include>Run_CuponValido.java</include>
-                            <include>Run_CuponVencido.java</include>
-                            <include>Run_EliminarDeshacer.java</include>
-                            <include>Run_EliminarProducto.java</include>
-                            <include>Run_FinalizarCompra.java</include>
-                            <include>Run_MenuProductos.java</include>
-                            <include>Run_PedidoSinUsuarioFactura.java</include>
-                            <include>Run_RPedido_Con_Usuario.java</include>
-                            <include>Run_RPedido_Sin_Usuario.java</include>
-                            <include>Run_SeguirComprando.java</include>
-                            <include>Run_CuponNoExiste.java</include> -->
+                           <!--<include>Run_InicioSesion.java</include>
+                           <include>Run_EliminarCupon.java</include> -->
+                           <include>Run_ActualizarCarrito.java</include>
+                          <!-- <include>Run_CambiarDireccion.java</include>
+                           <include>Run_CuponValido.java</include>
+                           <include>Run_CuponVencido.java</include>
+                           <include>Run_EliminarDeshacer.java</include>
+                           <include>Run_EliminarProducto.java</include>
+                           <include>Run_FinalizarCompra.java</include>
+                           <include>Run_MenuProductos.java</include>
+                           <include>Run_PedidoSinUsuarioFactura.java</include>
+                           <include>Run_RPedido_Con_Usuario.java</include>
+                           <include>Run_RPedido_Sin_Usuario.java</include>
+                           <include>Run_SeguirComprando.java</include>
+                           <include>Run_CuponNoExiste.java</include> -->
                     </includes>
                     <argLine>-Xmx512m</argLine>
                     <systemPropertyVariables>
