@@ -37,9 +37,9 @@ public class Base {
         dr = DesiredCapabilities.chrome();
         dr.setBrowserName("chrome");
         dr.setPlatform(Platform.LINUX);
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:\Users\luis.valor\Downloads\chromedriver_win32_new\chromedriver.exe");
 
-        driver = new RemoteWebDriver(new URL("http://localhost:4545/wd/hub"),dr);
+        driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
         driver.manage().window().maximize();
 
     }
