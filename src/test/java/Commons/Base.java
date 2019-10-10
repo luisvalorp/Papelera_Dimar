@@ -28,7 +28,7 @@ public class Base {
 
     RemoteWebDriver driver = new RemoteWebDriver(new URL("http://http://192.168.99.100:4444/wd/hub"), capabilities);*/
         
-       /System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+       /System.setProperty("webdriver.chrome.driver", "http://localhost:4545/wd/hub");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
