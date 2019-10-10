@@ -18,19 +18,16 @@ public class Base {
 
     public static WebDriver driver;
 
-    public void AbrirNavegador() {
+    public void AbrirNavegador() throws MalformedURLException{
         
-    /*DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-
-    capabilities.setCapability("version", "");
-
-    capabilities.setPlatform(Platform.WINDOWS);
-
-    RemoteWebDriver driver = new RemoteWebDriver(new URL("http://http://192.168.99.100:4444/wd/hub"), capabilities);*/
+        DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
+        capabilities.setCapability("version","");
+        capabilities.setPlatform(Platform.LINUX);
+        driver = new RemoteWebDriver(new URL("http://localhost:4545/wd/hub"), capabilities);
         
-       /System.setProperty("webdriver.chrome.driver", "http://localhost:4545/wd/hub");
+       /*System.setProperty("webdriver.chrome.driver", "http://localhost:4545/wd/hub");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        driver.manage().window().maximize();*/
 
        /* //Usando Firefox//
         System.setProperty("webdriver.gecko.driver","C:\\Users\\luis.valor\\Downloads\\geckodriver.exe");
