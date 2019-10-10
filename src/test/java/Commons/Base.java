@@ -23,7 +23,7 @@ public class Base {
         DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
         capabilities.setCapability("version","");
         capabilities.setPlatform(Platform.LINUX);
-        driver = new RemoteWebDriver(new URL("http://192.168.99.100:32768/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("127.0.0.1:32768/wd/hub"), capabilities);
         
        /*System.setProperty("webdriver.chrome.driver", "http://localhost:4545/wd/hub");
         driver = new ChromeDriver();
