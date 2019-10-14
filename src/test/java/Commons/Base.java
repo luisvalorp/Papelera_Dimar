@@ -20,10 +20,10 @@ public class Base {
 
     public void AbrirNavegador() throws MalformedURLException{
         
-        /*DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
+        DesiredCapabilities capabilities =  DesiredCapabilities.chrome();
         capabilities.setCapability("version","");
         capabilities.setPlatform(Platform.LINUX);
-        driver = new RemoteWebDriver(new URL("127.0.0.1:32768/wd/hub"), capabilities);*/
+        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         
        /*System.setProperty("webdriver.chrome.driver", "http://localhost:4545/wd/hub");
         driver = new ChromeDriver();
@@ -34,17 +34,19 @@ public class Base {
         driver = new FirefoxDriver();
         driver.manage().window().maximize();*/
         
+        /*It's Works for Windows*/
+        /*
         DesiredCapabilities dr = null;
         dr = DesiredCapabilities.chrome();
         dr.setBrowserName("chrome");
-        dr.setPlatform(Platform.LINUX);
+        dr.setPlatform(Platform.LINUX);*/
         //System.setProperty("webdriver.chrome.driver", "C:\Users\luis.valor\Downloads\chromedriver_win32_new\chromedriver.exe");
         
         /*** Docker toolbox - Jenkins (Windows) ***/
         //driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
         /*** Docker - Jenkins (Ubuntu) ***/
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        driver = new RemoteWebDriver(new URL("http://0.0.0.0:4444/wd/hub"),dr);
+        //driver = new RemoteWebDriver(new URL("http://0.0.0.0:4444/wd/hub"),dr);
         
         driver.manage().window().maximize();
 
