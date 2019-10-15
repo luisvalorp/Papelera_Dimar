@@ -43,10 +43,10 @@ public class Base {
         //System.setProperty("webdriver.chrome.driver", "C:\Users\luis.valor\Downloads\chromedriver_win32_new\chromedriver.exe");
         
         /*** Docker toolbox - Jenkins (Windows) ***/
-        //driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
+        driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
         /*** Docker - Jenkins (Ubuntu) ***/
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),dr);
+        //driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),dr);
         
         driver.manage().window().maximize();
 
