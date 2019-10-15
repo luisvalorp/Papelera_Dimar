@@ -46,7 +46,7 @@ public class Base {
         //driver = new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"),dr);
         /*** Docker - Jenkins (Ubuntu) ***/
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),dr);
+        driver = new RemoteWebDriver(new URL("http://172.17.0.1:4444/wd/hub"),dr);
         
         driver.manage().window().maximize();
 
